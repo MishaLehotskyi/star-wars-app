@@ -13,7 +13,7 @@ import ErrorPage from "@/app/ui/components/ErrorPage";
 export default function HeroesPage() {
   const searchParams = useSearchParams();
   const [heroes, setHeroes] = useState<Hero[]>([]);
-  const [perPage, setPerPage] = useState(0);
+  const [perPage, setPerPage] = useState<number>(10);
   const [showLoader, setShowLoader] = useState(true);
   const [error, setError] = useState(null);
   const currentPage = +(searchParams.get('page') || 1);

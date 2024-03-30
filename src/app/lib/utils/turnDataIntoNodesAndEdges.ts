@@ -6,7 +6,6 @@ import { FilmNode, HeroNode, ShipNode } from "@/app/lib/types/nodes";
 import { Edge } from "@/app/lib/types/edges";
 
 export default function turnDataIntoNodesAndEdges(hero: Hero | null, films: Film[], ships: Ship[]) {
-  console.log(hero, films, ships);
   let coordsS = { x: 0, y: 1000 };
   let coordsF = { x: 0, y: 350 };
 
@@ -14,7 +13,6 @@ export default function turnDataIntoNodesAndEdges(hero: Hero | null, films: Film
   const { filmNodes, heroEdges } = createFilmNodesAndEdges(films, heroNode, coordsF);
   const { shipNodes, filmEdges } = createShipNodesAndEdges(films, ships, filmNodes, coordsS);
 
-  console.log(heroNode, heroEdges, filmNodes, filmEdges, shipNodes);
   return { heroNode, heroEdges, filmNodes, filmEdges, shipNodes };
 }
 

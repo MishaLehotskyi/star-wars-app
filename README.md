@@ -1,36 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Star Wars App
 
-## Getting Started
+Star Wars App is a web application that allows users to browse
+a list of Star Wars heroes, along with detailed
+information about the spaceships and films associated
+with each hero. **The latest version of Next.js** used for structuring the application, **Axios** for
+API requests, and **React Flow** for visualizing
+information as a graph. Project deployed on Vercel.
 
-First, run the development server:
+## Running the Project
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. **Step 1:** Clone the repository to your local machine: **git clone** `https://github.com/MishaLehotskyi/star-wars-app`
+2. **Step 2:** Install dependencies: **npm install**
+3. **Step 3:** Start the project: **npm start**. The project will be available at `http://localhost:3000`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Running Tests
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Step 1:** Run the following command: **npm test**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Link to Deployed Version of the Project
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+You can view the deployed version of the project on [Vercel](https://star-wars-app-by-mykhailo-lehotskyi.vercel.app/)

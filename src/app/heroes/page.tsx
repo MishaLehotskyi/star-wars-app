@@ -1,19 +1,17 @@
 'use client'
 import { fetchAll } from "@/app/lib/api/api";
 import { Hero } from "@/app/lib/types/hero";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Pagination from "@/app/ui/components/Pagination";
 import HeroList from "@/app/ui/components/HeroList";
 import { useSearchParams } from "next/navigation";
 import Loader from "@/app/ui/components/Loader";
-import {Simulate} from "react-dom/test-utils";
-import error = Simulate.error;
 import ErrorPage from "@/app/ui/components/ErrorPage";
 
 export default function HeroesPage() {
   const searchParams = useSearchParams();
   const [heroes, setHeroes] = useState<Hero[]>([]);
-  const [perPage, setPerPage] = useState<number>(10);
+  const [perPage, setPerPage] = useState(0);
   const [showLoader, setShowLoader] = useState(true);
   const [error, setError] = useState(null);
   const currentPage = +(searchParams.get('page') || 1);

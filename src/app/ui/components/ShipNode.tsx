@@ -1,5 +1,6 @@
 import { Ship } from "@/app/lib/types/ship";
 import { Handle, Position } from "reactflow";
+import { GiSpaceship } from "react-icons/gi";
 
 interface Props {
   data: { ship: Ship },
@@ -11,7 +12,10 @@ export default function ShipNode({ data }: Props) {
   return (
     <div className="bg-white shadow-md rounded-lg p-4 w-64">
       <Handle type="target" position={Position.Top} />
-      <h2 className="text-lg font-semibold">{name}</h2>
+      <div className="flex">
+        <h2 className="text-lg font-semibold">{name}</h2>
+        <GiSpaceship className='w-8 h-8 ml-auto' />
+      </div>
       <div className="mt-2">
         <p><span className="font-semibold">Model:</span> {model}</p>
         <p><span className="font-semibold">Class:</span> {starship_class}</p>

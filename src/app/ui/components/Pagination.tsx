@@ -43,22 +43,24 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
       >
         Prev
       </button>
-        {pages.map(num => (
-          <button
-            key={num}
-            onClick={() => {
-              handlePageChange(num);
-            }}
-            className={
-              clsx('bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2',
-              {
-                'bg-blue-800': currentPage === num,
-              },
+        <div className='flex flex-row flex-wrap justify-center gap-y-2'>
+            {pages.map(num => (
+                <button
+                    key={num}
+                    onClick={() => {
+                        handlePageChange(num);
+                    }}
+                    className={
+                        clsx('bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2',
+                            {
+                                'bg-blue-800': currentPage === num,
+                            },
+                        )}
+                >
+                    {num}
+                </button>)
             )}
-          >
-            {num}
-          </button>)
-        )}
+        </div>
       <button
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2 disabled:opacity-50 disabled:cursor-not-allowed"
         disabled={currentPage === totalPages}

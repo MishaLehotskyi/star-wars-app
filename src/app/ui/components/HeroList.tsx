@@ -3,11 +3,11 @@ import Link from "next/link";
 
 export default function HeroList({ list } : { list: Hero[] }) {
   return (
-    <ul className='max-w-screen-xl mx-auto grid grid-cols-5 gap-4 py-4'>
+    <ul className='max-w-screen-xl mx-auto flex flex-row flex-wrap justify-center gap-4 py-4'>
       {list.map(hero => (
         <li
           key={hero.name}
-          className='max-w-xs rounded overflow-hidden
+          className='w-48 rounded overflow-hidden
           shadow-lg m-2 hover:shadow-xl transition duration-300
           ease-in-out transform hover:-translate-y-1 hover:scale-105'
         >

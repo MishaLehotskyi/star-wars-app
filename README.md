@@ -7,6 +7,10 @@ with each hero. **The latest version of Next.js** used for structuring the appli
 API requests, and **React Flow** for visualizing
 information as a graph. Project deployed on Vercel.
 
+# Technologies
+
+Next.js, React Flow, TypeScript, Tailwind.
+
 ## Running the Project
 
 1. **Step 1:** Clone the repository to your local machine: **git clone** `https://github.com/MishaLehotskyi/star-wars-app`

@@ -1,5 +1,6 @@
 import { Handle, Position } from "reactflow";
 import { Hero } from "@/app/lib/types/hero";
+import { PiPersonArmsSpread } from "react-icons/pi";
 
 interface Props {
   data: { heroSourceHandleIds: string[], hero: Hero },
@@ -12,7 +13,10 @@ export default function HeroNode({ data, isConnectable }: Props) {
 
   return (
     <div className="bg-white shadow-md rounded-lg p-4 w-64">
-      <h2 className="text-lg font-semibold">{name}</h2>
+      <div className='flex'>
+        <h2 className="text-lg font-semibold">{name}</h2>
+        <PiPersonArmsSpread className='ml-auto w-8 h-8' />
+      </div>
       <div className="mt-2">
         <p>Height: {height} cm</p>
         <p>Mass: {mass} kg</p>

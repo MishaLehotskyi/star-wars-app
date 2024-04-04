@@ -1,6 +1,6 @@
 import { Film } from "@/app/lib/types/film";
 import { Handle, Position } from "reactflow";
-import {Ship} from "@/app/lib/types/ship";
+import { GiFilmProjector } from "react-icons/gi";
 
 interface Props {
   data: { filmSourceHandleIds: string[], film: Film },
@@ -13,7 +13,10 @@ export default function FilmNode({ data, isConnectable }: Props) {
   return (
     <div className="bg-white shadow-md rounded-lg p-4 w-64">
       <Handle type="target" position={Position.Top}></Handle>
-      <h2 className="text-lg font-semibold">{title}</h2>
+      <div className="flex">
+        <h2 className="text-lg font-semibold">{title}</h2>
+        <GiFilmProjector className='w-8 h-8 ml-auto' />
+      </div>
       <div className="mt-2">
         <p>Episode: {episode_id}</p>
         <p>Director: {director}</p>

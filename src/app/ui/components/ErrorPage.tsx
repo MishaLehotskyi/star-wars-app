@@ -1,6 +1,10 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-export default function ErrorPage({ errorMessage }: { errorMessage: string }) {
+interface Props {
+  errorMessage: string,
+}
+
+export default function ErrorPage({ errorMessage }: Props) {
   return (
     <div className="bg-gray-100 h-screen flex items-center justify-center">
       <div className="text-center">

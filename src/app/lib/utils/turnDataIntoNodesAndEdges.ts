@@ -1,9 +1,9 @@
-import { Film } from "@/app/lib/types/film";
-import { v4 as uuidv4 } from "uuid";
-import { Hero } from "@/app/lib/types/hero";
-import { Ship } from "@/app/lib/types/ship";
-import { FilmNode, HeroNode, ShipNode } from "@/app/lib/types/nodes";
-import { Edge } from "@/app/lib/types/edges";
+import { Film } from '@/app/lib/types/film';
+import { v4 as uuidv4 } from 'uuid';
+import { Hero } from '@/app/lib/types/hero';
+import { Ship } from '@/app/lib/types/ship';
+import { FilmNode, HeroNode, ShipNode } from '@/app/lib/types/nodes';
+import { Edge } from '@/app/lib/types/edges';
 
 export default function turnDataIntoNodesAndEdges(hero: Hero | null, films: Film[], ships: Ship[]) {
   let coordsS = { x: 0, y: 1000 };

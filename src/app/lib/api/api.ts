@@ -1,7 +1,7 @@
 import axios from 'axios';
-import { Hero } from "@/app/lib/types/hero";
-import { Film } from "@/app/lib/types/film";
-import { Ship } from "@/app/lib/types/ship";
+import { Hero } from '@/app/lib/types/hero';
+import { Film } from '@/app/lib/types/film';
+import { Ship } from '@/app/lib/types/ship';
 
 const BASE_URL = 'https://sw-api.starnavi.io/';
 
@@ -51,12 +51,12 @@ export async function fetchDetailsById(id: string) {
   const filmPromises = hero.films.map(film => axios.get(`${BASE_URL + 'films/'}${film}`));
   const shipPromises = hero.starships.map(ship => axios
     .get(`${BASE_URL + 'starships/'}${ship}`)
-      .then(res => ({ id: ship, ...res.data })));
+    .then(res => ({ id: ship, ...res.data })));
 
   const [filmResponses, shipResponses] = await Promise.all([Promise.all(filmPromises), Promise.all(shipPromises)]);
 
   const films: Film[] = filmResponses.map(response => response.data);
   const ships: Ship[] = shipResponses.map(response => response);
 
-  return { hero, films, ships }
+  return { hero, films, ships };
 }

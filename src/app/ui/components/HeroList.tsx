@@ -1,7 +1,11 @@
-import { Hero } from "@/app/lib/types/hero";
-import Link from "next/link";
+import { Hero } from '@/app/lib/types/hero';
+import Link from 'next/link';
 
-export default function HeroList({ list } : { list: Hero[] }) {
+interface Props {
+  list: Hero[],
+}
+
+export default function HeroList({ list } : Props) {
   return (
     <ul className='max-w-screen-xl mx-auto flex flex-row flex-wrap justify-center gap-4 py-4'>
       {list.map(hero => (

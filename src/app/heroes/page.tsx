@@ -1,12 +1,12 @@
-'use client'
-import { fetchAll } from "@/app/lib/api/api";
-import { Hero } from "@/app/lib/types/hero";
-import { Suspense, useEffect, useState } from "react";
-import Pagination from "@/app/ui/components/Pagination";
-import HeroList from "@/app/ui/components/HeroList";
-import { useSearchParams } from "next/navigation";
-import Loader from "@/app/ui/components/Loader";
-import ErrorPage from "@/app/ui/components/ErrorPage";
+'use client';
+import { fetchAll } from '@/app/lib/api/api';
+import { Hero } from '@/app/lib/types/hero';
+import { useEffect, useState } from 'react';
+import Pagination from '@/app/ui/components/Pagination';
+import HeroList from '@/app/ui/components/HeroList';
+import { useSearchParams } from 'next/navigation';
+import Loader from '@/app/ui/components/Loader';
+import ErrorPage from '@/app/ui/components/ErrorPage';
 
 export default function HeroesPage() {
   const searchParams = useSearchParams();
@@ -33,11 +33,11 @@ export default function HeroesPage() {
   }, []);
 
   if (error) {
-    return (<ErrorPage errorMessage="Oops! Failed to load heroes, try again later" />)
+    return (<ErrorPage errorMessage="Oops! Failed to load heroes, try again later" />);
   }
 
   if (showLoader) {
-    return (<Loader />)
+    return (<Loader />);
   }
 
   return (

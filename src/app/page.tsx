@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
         <Link href="/heroes"
           className="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full shadow-md transition duration-300 ease-in-out">Get
           Started</Link>
-        </div>
+      </div>
     </main>
   );
 }

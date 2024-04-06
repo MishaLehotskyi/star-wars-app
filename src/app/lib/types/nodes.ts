@@ -1,6 +1,6 @@
-import { Hero } from "@/app/lib/types/hero";
-import { Film } from "@/app/lib/types/film";
-import { Ship } from "@/app/lib/types/ship";
+import { Hero } from '@/app/lib/types/hero';
+import { Film } from '@/app/lib/types/film';
+import { Ship } from '@/app/lib/types/ship';
 
 export interface HeroNode {
   id: string,

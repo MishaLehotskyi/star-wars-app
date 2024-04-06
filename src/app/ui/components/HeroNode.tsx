@@ -1,6 +1,6 @@
-import { Handle, Position } from "reactflow";
-import { Hero } from "@/app/lib/types/hero";
-import { PiPersonArmsSpread } from "react-icons/pi";
+import { Handle, Position } from 'reactflow';
+import { Hero } from '@/app/lib/types/hero';
+import { PiPersonArmsSpread } from 'react-icons/pi';
 
 interface Props {
   data: { heroSourceHandleIds: string[], hero: Hero },

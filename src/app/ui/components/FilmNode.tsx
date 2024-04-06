@@ -1,6 +1,6 @@
-import { Film } from "@/app/lib/types/film";
-import { Handle, Position } from "reactflow";
-import { GiFilmProjector } from "react-icons/gi";
+import { Film } from '@/app/lib/types/film';
+import { Handle, Position } from 'reactflow';
+import { GiFilmProjector } from 'react-icons/gi';
 
 interface Props {
   data: { filmSourceHandleIds: string[], film: Film },

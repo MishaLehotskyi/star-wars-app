@@ -1,6 +1,6 @@
-import { Ship } from "@/app/lib/types/ship";
-import { Handle, Position } from "reactflow";
-import { GiSpaceship } from "react-icons/gi";
+import { Ship } from '@/app/lib/types/ship';
+import { Handle, Position } from 'reactflow';
+import { GiSpaceship } from 'react-icons/gi';
 
 interface Props {
   data: { ship: Ship },
@@ -31,5 +31,5 @@ export default function ShipNode({ data }: Props) {
         <p><span className="font-semibold">Consumables:</span> {consumables}</p>
       </div>
     </div>
-    );
+  );
 }
